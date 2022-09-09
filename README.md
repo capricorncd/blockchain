@@ -2,8 +2,6 @@
 
 A blockchain is a type of Digital Ledger Technology (DLT) that consists of growing list of records, called blocks, that are securely linked together using cryptography.
 
-https://en.wikipedia.org/wiki/Blockchain
-
 ### Process flow
 
 - Add transactions
@@ -13,6 +11,12 @@ https://en.wikipedia.org/wiki/Blockchain
 - The chain has been created, and clear the transactions that have been listed on the chain.
 
 ![Create a Blockchain](./Blockchain.png)
+
+## Demo Link
+
+https://capricorncd.github.io/demos/blockchain/
+
+![Blockchain QR code](./qr.png)
 
 ## Example
 
@@ -40,6 +44,6 @@ blocks.push({
 })
 ```
 
-## Demo Link
+## Wiki
 
-https://capricorncd.github.io/demos/blockchain/
+https://en.wikipedia.org/wiki/Blockchain
