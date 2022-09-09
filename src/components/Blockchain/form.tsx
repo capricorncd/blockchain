@@ -103,7 +103,7 @@ export function Form() {
           disabled={!blocks.length}
           onClick={() => clearAllBlockchain()}
         >
-          Clear all blockchain
+          Clear all blockchains
         </Button>
       </Space>
     </div>

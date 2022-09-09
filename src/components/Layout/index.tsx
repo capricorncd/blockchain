@@ -6,28 +6,33 @@
  */
 import { HomeOutlined, GithubOutlined } from '@ant-design/icons';
 import { Button, PageHeader, Layout as AntLayout } from 'antd';
-import { Outlet, useNavigate, Link } from 'react-router-dom';
+import { Outlet, useNavigate, Link, useLocation } from 'react-router-dom';
 import { AuthStatus } from '../Auth';
 
 const { Content, Footer } = AntLayout;
 
 export function Layout() {
   const navigate = useNavigate();
+  const { pathname } = useLocation();
 
   return (
     <AntLayout style={{ minHeight: '100vh' }}>
       <PageHeader
         ghost={false}
-        title="React18 Hooks Typescript Vite"
-        subTitle="Ant Design"
+        title="Blockchain"
+        subTitle="Ant Design & React18 & Vite"
         extra={[
           // 不用Link，AuthProvider的数据会丢失
           // AuthProvider status will be lost when don't use Link
           <Link key="protected" to="/protected">
-            <Button>Protected Page</Button>
+            <Button type={pathname === '/protected' ? 'primary' : 'default'}>
+              Protected Page
+            </Button>
           </Link>,
           <Link key="public" to="/public">
-            <Button type="primary">Public</Button>
+            <Button type={pathname === '/public' ? 'primary' : 'default'}>
+              Public
+            </Button>
           </Link>,
           <Button
             key="github"
