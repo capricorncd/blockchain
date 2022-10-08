@@ -58,24 +58,6 @@ export function Form() {
             Add transaction
           </Button>
         </Input.Group>
-
-        <Space>
-          <Button
-            type="primary"
-            disabled={!transactions.length}
-            onClick={() => writeToBlockchain()}
-          >
-            Write to the blockchain
-          </Button>
-          <Button
-            type="primary"
-            disabled={!blocks.length}
-            danger
-            onClick={() => tamper()}
-          >
-            Tamper
-          </Button>
-        </Space>
       </Space>
 
       <Divider>Transactions that are not on the blockchain</Divider>
@@ -86,6 +68,16 @@ export function Form() {
           </li>
         ))}
       </ul>
+
+      <Space>
+        <Button
+          type="primary"
+          disabled={!transactions.length}
+          onClick={() => writeToBlockchain()}
+        >
+          Write to the blockchain
+        </Button>
+      </Space>
 
       <Divider>Transactions already on the blockchain</Divider>
       <ul>
@@ -98,8 +90,13 @@ export function Form() {
 
       <Space>
         <Button
-          type="primary"
+          disabled={!blocks.length}
           danger
+          onClick={() => tamper()}
+        >
+          Tamper
+        </Button>
+        <Button
           disabled={!blocks.length}
           onClick={() => clearAllBlockchain()}
         >
