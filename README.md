@@ -10,7 +10,7 @@ A blockchain is a type of Digital Ledger Technology (DLT) that consists of growi
 
 - The chain has been created, and clear the transactions that have been listed on the chain.
 
-![Create a Blockchain](./Blockchain.png)
+![Blockchain](./Blockchain.png)
 
 ## Demo Link
 
