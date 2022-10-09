@@ -11,8 +11,6 @@ import { useBlockchain } from './context';
 export function Head() {
   const store = useBlockchain();
 
-  if (!store) return null;
-
   return (
     <Space
       direction="vertical"

@@ -44,8 +44,8 @@ const GENESIS_BLOCK: BlockItem = {
   transactions: [],
 };
 
-export const BlockchainContext = createContext<BlockchainContextValue | null>(
-  null
+export const BlockchainContext = createContext<BlockchainContextValue>(
+  {} as BlockchainContextValue
 );
 
 interface BlockchainProviderProps {

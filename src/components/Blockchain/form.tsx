@@ -12,7 +12,6 @@ export function Form() {
   const inputRef = useRef(null);
   const [value, setValue] = useState('');
   const store = useBlockchain();
-  if (!store) return null;
 
   const {
     addTransaction,
@@ -89,17 +88,10 @@ export function Form() {
       </ul>
 
       <Space>
-        <Button
-          disabled={!blocks.length}
-          danger
-          onClick={() => tamper()}
-        >
+        <Button disabled={!blocks.length} danger onClick={() => tamper()}>
           Tamper
         </Button>
-        <Button
-          disabled={!blocks.length}
-          onClick={() => clearAllBlockchain()}
-        >
+        <Button disabled={!blocks.length} onClick={() => clearAllBlockchain()}>
           Clear all blockchains
         </Button>
       </Space>
