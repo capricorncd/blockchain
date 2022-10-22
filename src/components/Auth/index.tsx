@@ -15,8 +15,8 @@ interface AuthContextType<T> {
   signOut: (callback: VoidFunction) => void;
 }
 
-const AuthContext = React.createContext<AuthContextType<string | null> | null>(
-  null
+const AuthContext = React.createContext<AuthContextType<string | null>>(
+  {} as AuthContextType<string | null>
 );
 
 export function AuthProvider({ children }: { children: React.ReactNode }) {
@@ -49,7 +49,7 @@ export function AuthStatus() {
   const auth = useAuth();
   const navigate = useNavigate();
 
-  if (!auth?.user) {
+  if (!auth.user) {
     return <p>You are not logged in.</p>;
   }
 
@@ -71,7 +71,7 @@ export function RequireAuth({ children }: { children: JSX.Element }) {
   const auth = useAuth();
   const location = useLocation();
 
-  if (!auth?.user) {
+  if (!auth.user) {
     // Redirect them to the /login page, but save the current location they were
     // trying to go to when they were redirected. This allows us to send them
     // along to that page after they login, which is a nicer user experience
