@@ -1,22 +1,20 @@
 /**
- * Created by Xing Zhong.
+ * Created by Capricorncd
  * https://github.com/capricorncd
- * https://github.com/xing1984
  * Date: 2022/09/09 21:46:09 (GMT+0900)
  */
 import { HomeOutlined, GithubOutlined } from '@ant-design/icons';
-import { Button, PageHeader, Layout as AntLayout } from 'antd';
+import { Button, PageHeader } from 'antd';
 import { Outlet, useNavigate, Link, useLocation } from 'react-router-dom';
 import { AuthStatus } from '../Auth';
-
-const { Content, Footer } = AntLayout;
+import { Wrapper } from '../Ui';
 
 export function Layout() {
   const navigate = useNavigate();
   const { pathname } = useLocation();
 
   return (
-    <AntLayout style={{ minHeight: '100vh' }}>
+    <Wrapper bg="#f0f2f5" mh="100vh">
       <PageHeader
         ghost={false}
         title="Blockchain"
@@ -46,11 +44,11 @@ export function Layout() {
         backIcon={<HomeOutlined />}
         onBack={() => navigate('/')}
       ></PageHeader>
-      <Content style={{ padding: '24px' }}>
+      <Wrapper p="24">
         <AuthStatus />
         <Outlet />
-      </Content>
-      <Footer style={{ textAlign: 'center' }}>
+      </Wrapper>
+      <Wrapper p="24 50" ta="center" bg="#fff">
         ©2022 Created by{' '}
         <Button
           type="link"
@@ -61,7 +59,7 @@ export function Layout() {
           Capricorncd
         </Button>
         .
-      </Footer>
-    </AntLayout>
+      </Wrapper>
+    </Wrapper>
   );
 }
