@@ -22,6 +22,11 @@ export function Layout() {
         extra={[
           // 不用Link，AuthProvider的数据会丢失
           // AuthProvider status will be lost when don't use Link
+          <Link key="home" to="/">
+            <Button type={pathname === '/' ? 'primary' : 'default'}>
+              Home
+            </Button>
+          </Link>,
           <Link key="protected" to="/protected">
             <Button type={pathname === '/protected' ? 'primary' : 'default'}>
               Protected Page
@@ -48,7 +53,7 @@ export function Layout() {
         <AuthStatus />
         <Outlet />
       </Wrapper>
-      <Wrapper p="24 50" ta="center" bg="#fff">
+      <Wrapper p="24 50" ta="center">
         ©2022 Created by{' '}
         <Button
           type="link"
