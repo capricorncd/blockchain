@@ -1,7 +1,6 @@
 /**
- * Created by Xing Zhong.
+ * Created by Capricorncd.
  * https://github.com/capricorncd
- * https://github.com/xing1984
  * Date: 2022/08/09 20:02:43 (GMT+0900)
  */
 import { setLocalStorage, getLocalStorage } from '@zx-libs/utils';

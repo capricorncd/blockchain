@@ -3,7 +3,7 @@
   "description": "Blockchain demos implemented with React",
   "version": "1.0.0",
   "main": "src/index.tsx",
-  "author": "Xing Zhong",
+  "author": "Capricorncd",
   "license": "MIT",
   "private": true,
   "keywords": [

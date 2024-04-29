@@ -1,7 +1,6 @@
 /**
- * Created by Xing Zhong.
+ * Created by Capricorncd.
  * https://github.com/capricorncd
- * https://github.com/xing1984
  * Date: 2022/09/09 21:46:42 (GMT+0900)
  */
 import { Wrapper } from '../Ui';

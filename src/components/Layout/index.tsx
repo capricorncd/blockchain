@@ -14,11 +14,12 @@ export function Layout() {
   const { pathname } = useLocation();
 
   return (
-    <Wrapper bg="#f0f2f5" mh="100vh">
+    <>
       <PageHeader
         ghost={false}
         title="Blockchain"
         subTitle="Ant Design & React18 & Vite"
+        style={{ position: 'sticky', top: 0, zIndex: 1 }}
         extra={[
           // 不用Link，AuthProvider的数据会丢失
           // AuthProvider status will be lost when don't use Link
@@ -49,7 +50,7 @@ export function Layout() {
         backIcon={<HomeOutlined />}
         onBack={() => navigate('/')}
       ></PageHeader>
-      <Wrapper p="24">
+      <Wrapper p="24" bg="#f0f2f5" mh="calc(100vh - 152px)">
         <AuthStatus />
         <Outlet />
       </Wrapper>
@@ -65,6 +66,6 @@ export function Layout() {
         </Button>
         .
       </Wrapper>
-    </Wrapper>
+    </>
   );
 }
