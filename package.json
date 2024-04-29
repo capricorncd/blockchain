@@ -21,7 +21,7 @@
     "lint": "eslint . --fix --ext .js,.cjs,.ts,.tsx"
   },
   "dependencies": {
-    "@prop-styles/react": "^0.0.9",
+    "@prop-styles/react": "^0.0.10",
     "@types/crypto-js": "^4.1.1",
     "@zx-libs/utils": "^0.0.4",
     "antd": "^4.22.4",
